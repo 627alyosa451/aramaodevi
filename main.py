@@ -11,7 +11,7 @@ data = {
     "cetvel": "static/images/cetvel.jpg",
     "makas": "static/images/makas.jpg",
     "yapıştırıcı": "static/images/yapistirici.jpg",
-    "zımbalık": "static/images/zimbalık.jpg",
+    "zımba": "static/images/zimbalık.jpg",
     "klasör": "static/images/klasor.jpg",
     "kalemtıraş": "static/images/kalemtiras.jpg",
     "boya": "static/images/boya.jpg"
@@ -29,6 +29,10 @@ def search():
         return render_template("result.html", item=query, image=image_path)
     else:
         return render_template("result.html", item=None, image=None)
+
+@app.route("/items")
+def all_items():
+    return render_template("items.html", items=data)
 
 def main():
     app.run(port=int(os.environ.get('PORT', 80)))

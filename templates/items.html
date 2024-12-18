@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Stationery Items</title>
+</head>
+<body>
+    <h1>All Stationery Items</h1>
+    <div>
+        {% for item, image in items.items() %}
+            <div style="margin-bottom: 20px;">
+                <h3>{{ item }}</h3>
+                <img src="{{ image }}" alt="{{ item }}" style="width:200px;height:auto;">
+            </div>
+        {% endfor %}
+    </div>
+    <br>
+    <a href="/">Go back to search</a>
+</body>
+</html>
