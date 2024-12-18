@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <h1>Search Result</h1>
+    {% if item %}
+        <p>You searched for: <strong>{{ item }}</strong></p>
+        <img src="{{ image }}" alt="{{ item }}" style="width:300px;height:auto;">
+        <br><br>
+        <a href="/">Search again</a>
+    {% else %}
+        <p>Item not found.</p>
+        <br><br>
+        <a href="/">Try another search</a>
+    {% endif %}
+</body>
+</html>
